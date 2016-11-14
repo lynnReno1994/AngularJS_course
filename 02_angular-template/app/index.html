@@ -5,24 +5,25 @@
         <title>Angular Hello World</title>
     </head>
     <body ng-controller="NameController">
-        <h1>hello  {{name+"you are the best one"}}</h1>
+        <ul>
+            <li ng-repeat="phone in phones">
+                <span>{{phone.name}}</span>
+                <p>{{phone.description}}</p>
+            </li>
+        </ul>
         <script src="vendor/angular.min.js"></script>
         <script src="app.js"></script>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     </body>
 </html>
+<!--  模板变量和model数据绑定：
+    1.声明一个ng-app，并且制定名字
+    2，声明一个ng-controller并为这个ng-controller指定一个名字
+    3，写页面展示所用的模板，在这个模板里有：
+        a）数据绑定
+        b）循环指令ng-repeat
+    4，JS中定义一个模块，将模块的名字指定为ng-app所指定的名字
+    5，JS中在模块上定义一个controller，controller实际是一个构造函数，名字开头字母大写，controller接受两个参数。
+        a）第一个是名字，跟模板中ng-controller指定的名字相同
+        b）回调函数，有参数-$scope（固定，不能改），将模板上的变量与model里的数据绑定到一起，并进行watch，model数据改，view也对应变化
+-->

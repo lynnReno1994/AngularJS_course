@@ -14,5 +14,11 @@ angular.module('hello',[]);
 angular
     .module('hello')
     .controller('NameController',function($scope){
-        $scope.name='lynnReno1994  !';
+        $scope.phones=[{
+            name:'iphone7',
+            description:'贵 贵 贵'
+        },{
+            name:'Samsung',
+            description:'炸 炸 炸'
+        }];
 });
